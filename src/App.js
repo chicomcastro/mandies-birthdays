@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import confetti from "canvas-confetti";
 import { useEffect } from "react";
+import DuckSvg from "./assets/DuckSvg";
 
 function App() {
   const fireworkBurst = () => {
@@ -53,18 +54,22 @@ function App() {
   return (
     <div className="App" onClick={() => fireworkBurst()}>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Feliz aniversário de
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+        <div
+          style={{
+            width: 200,
+            display: "flex",
+            flexDirection: "row",
+          }}
         >
-          Learn React
-        </a>
+          <DuckSvg />
+          <DuckSvg />
+        </div>
+        <p>
+          anos, mô mô!
+        </p>
       </header>
     </div>
   );
