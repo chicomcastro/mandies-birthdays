@@ -1,8 +1,8 @@
-import logo from "./logo.svg";
 import "./App.css";
 import confetti from "canvas-confetti";
 import { useEffect } from "react";
 import DuckSvg from "./assets/DuckSvg";
+import { Helmet } from "react-helmet";
 
 function App() {
   const fireworkBurst = () => {
@@ -53,10 +53,13 @@ function App() {
 
   return (
     <div className="App" onClick={() => fireworkBurst()}>
+      <Helmet>
+        <title>Mandie's 22th Birthday</title>
+        <meta name="description" content="App to celebrate Mandie's 22th birthday" />
+        <meta name="theme-color" content="#008f68" />
+      </Helmet>
       <header className="App-header">
-        <p>
-          Feliz aniversário de
-        </p>
+        <p>Feliz aniversário de</p>
         <div
           style={{
             width: 200,
@@ -67,9 +70,7 @@ function App() {
           <DuckSvg />
           <DuckSvg />
         </div>
-        <p>
-          anos, mô mô!
-        </p>
+        <p>anos, mô mô!</p>
       </header>
     </div>
   );
